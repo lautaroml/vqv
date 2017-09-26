@@ -20,6 +20,8 @@ class RegisterController extends Controller
     |
     */
 
+
+
     use RegistersUsers;
 
     /**
@@ -67,5 +69,10 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    public function index()
+    {
+dd(1);
     }
 }
