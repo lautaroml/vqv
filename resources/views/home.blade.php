@@ -5,8 +5,6 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-                <div class="panel-heading">Panel</div>
-
                 <div class="panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">
@@ -37,13 +35,19 @@
                                         {{ $taller->professor }}
                                     </td>
                                     <td>
-                                        {{ $taller->day_one }}
+                                        @if($taller->day_one == 6)
+                                            X
+                                        @endif
                                     </td>
                                     <td>
-                                        {{ $taller->day_two }}
+                                        @if($taller->day_two == 7)
+                                            X
+                                        @endif
                                     </td>
                                     <td>
-                                        {{ $taller->day_three }}
+                                        @if($taller->day_three == 1)
+                                            X
+                                        @endif
                                     </td>
                                     <td>
                                         Inscribirse
