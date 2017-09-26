@@ -12,43 +12,43 @@
                         {{ csrf_field() }}
 
                         <div class="col-md-6">
-                            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                <label for="name" class="col-md-4 control-label">Nombre</label>
+                            <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
+                                <label for="first_name" class="col-md-4 control-label">Nombre</label>
 
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                                    <input id="first_name" type="text" class="form-control" name="first_name" value="{{ old('first_name') }}" required autofocus>
 
-                                    @if ($errors->has('name'))
+                                    @if ($errors->has('first_name'))
                                         <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('first_name') }}</strong>
                                     </span>
                                     @endif
                                 </div>
                             </div>
 
-                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                            <div class="form-group{{ $errors->has('document') ? ' has-error' : '' }}">
+                                <label for="email" class="col-md-4 control-label">Documento</label>
 
                                 <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                                    <input id="document" type="text" class="form-control" name="document" value="{{ old('document') }}" required>
 
-                                    @if ($errors->has('email'))
+                                    @if ($errors->has('document'))
                                         <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong>{{ $errors->first('document') }}</strong>
                                     </span>
                                     @endif
                                 </div>
                             </div>
 
-                            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                <label for="password" class="col-md-4 control-label">Password</label>
+                            <div class="form-group{{ $errors->has('age') ? ' has-error' : '' }}">
+                                <label for="age" class="col-md-4 control-label">Edad</label>
 
                                 <div class="col-md-6">
-                                    <input id="password" type="password" class="form-control" name="password" required>
+                                    <input id="age" type="number" class="form-control" name="age" required>
 
-                                    @if ($errors->has('password'))
+                                    @if ($errors->has('age'))
                                         <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
+                                        <strong>{{ $errors->first('age') }}</strong>
                                     </span>
                                     @endif
                                 </div>
@@ -61,14 +61,17 @@
                                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                                 </div>
                             </div>
-
                         </div>
+
+
+
+
                         <div class="col-md-6">
-                            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                <label for="name" class="col-md-4 control-label">Nombre</label>
+                            <div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
+                                <label for="name" class="col-md-4 control-label">Apellido</label>
 
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                                    <input id="name" type="text" class="form-control" name="last_name" value="{{ old('last_name') }}" required autofocus>
 
                                     @if ($errors->has('name'))
                                         <span class="help-block">
