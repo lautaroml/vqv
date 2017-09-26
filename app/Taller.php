@@ -10,4 +10,9 @@ class Taller extends Model
     {
         return $this->belongsToMany('App\User');
     }
+
+    public function compatibilities()
+    {
+        return $this->hasMany('App\Compatibility');
+    }
 }
