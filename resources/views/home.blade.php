@@ -50,11 +50,12 @@
                                         @endif
                                     </td>
                                     <td style="border-left: 1px solid">
-                                        <span class="button btn-xs">
-                                            hola
+                                        <span class="btn btn-primary btn-xs">
+                                            <a href="/foo">Inscribirme</a>
                                         </span>
-                                        <br>
-                                        Eliminar inscripción
+                                        <span class="btn btn-primary btn-xs">
+                                            <a href="foo">Eliminar inscripción</a>
+                                        </span>
                                     </td>
                                 </tr>
                             @endforeach
