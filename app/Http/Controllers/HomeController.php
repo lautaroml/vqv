@@ -28,4 +28,9 @@ class HomeController extends Controller
 
         return view('home', compact('talleres'));
     }
+
+    public function subscribe()
+    {
+        dd('subscribe');
+    }
 }

@@ -50,7 +50,9 @@
                                         @endif
                                     </td>
                                     <td style="border-left: 1px solid">
-                                        Inscribirse
+                                        <span class="button btn-xs">
+                                            hola
+                                        </span>
                                         <br>
                                         Eliminar inscripción
                                     </td>

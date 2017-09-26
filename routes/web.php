@@ -18,7 +18,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/foo', function(){
-   dd(1);
-});
+Route::post('/home', 'HomeController@subscribe')->name('subscribe');
