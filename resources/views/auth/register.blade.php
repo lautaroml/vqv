@@ -68,8 +68,8 @@
                                 </div>
                             </div>
 
-                            <div class="form-group{{ $errors->has('birthday') ? ' has-error' : '' }}">
-                                <label for="birthday" class="col-md-4 control-label">Fecha de nacimiento</label>
+                            <div class="form-group{{ $errors->has('country') ? ' has-error' : '' }}">
+                                <label for="country" class="col-md-4 control-label">Lugar de residencia - País </label>
 
                                 <div class="col-md-6">
                                     <select name="country" id="country" class="form-control">
@@ -79,8 +79,6 @@
                                     </select>
                                 </div>
                             </div>
-
-
                         </div>
 
 
