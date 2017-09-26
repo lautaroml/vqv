@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
                 <div class="panel-heading">Panel</div>
 
@@ -16,7 +16,7 @@
 
                     <h3>Elegí de entre los siguientes talleres:</h3>
 
-                    <table class="table table-striped">
+                    <table class="table table-condensed table-hover">
                         <thead>
                             <tr>
                                 <th>Nombre</th>
@@ -24,6 +24,7 @@
                                 <th>Sabado</th>
                                 <th>Domingo</th>
                                 <th>Lunes</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -43,6 +44,11 @@
                                     </td>
                                     <td>
                                         {{ $taller->day_three }}
+                                    </td>
+                                    <td>
+                                        Inscribirse
+                                        <br>
+                                        Eliminar inscripción
                                     </td>
                                 </tr>
                             @endforeach
