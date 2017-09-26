@@ -34,22 +34,22 @@
                                     <td>
                                         {{ $taller->professor }}
                                     </td>
-                                    <td>
+                                    <td style="border-left: 1px solid">
                                         @if($taller->day_one)
                                             X
                                         @endif
                                     </td>
-                                    <td>
+                                    <td style="border-left: 1px solid">
                                         @if($taller->day_two)
                                             X
                                         @endif
                                     </td>
-                                    <td>
+                                    <td style="border-left: 1px solid">
                                         @if($taller->day_three)
                                             X
                                         @endif
                                     </td>
-                                    <td>
+                                    <td style="border-left: 1px solid">
                                         Inscribirse
                                         <br>
                                         Eliminar inscripción
