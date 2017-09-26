@@ -20,6 +20,7 @@ class CreateTallersTable extends Migration
             $table->integer('day_one');
             $table->integer('day_two');
             $table->integer('day_three');
+            $table->integer('cupo');
             $table->timestamps();
         });
     }

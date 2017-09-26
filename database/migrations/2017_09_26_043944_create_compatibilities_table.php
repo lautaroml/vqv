@@ -17,6 +17,7 @@ class CreateCompatibilitiesTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('taller_id');
             $table->unsignedInteger('external_taller_id');
+            $table->boolean('negative');
             $table->timestamps();
         });
     }
