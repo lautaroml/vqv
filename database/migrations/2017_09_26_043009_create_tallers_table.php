@@ -15,6 +15,11 @@ class CreateTallersTable extends Migration
     {
         Schema::create('tallers', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('professor');
+            $table->integer('day_one');
+            $table->integer('day_two');
+            $table->integer('day_three');
             $table->timestamps();
         });
     }

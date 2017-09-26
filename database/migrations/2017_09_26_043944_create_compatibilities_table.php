@@ -15,6 +15,8 @@ class CreateCompatibilitiesTable extends Migration
     {
         Schema::create('compatibilities', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('taller_id');
+            $table->unsignedInteger('external_taller_id');
             $table->timestamps();
         });
     }
