@@ -15,4 +15,9 @@ class Taller extends Model
     {
         return $this->hasMany('App\Compatibility')->where('negative', null);
     }
+
+    public function incompatibilities()
+    {
+        return $this->hasMany('App\Compatibility')->where('negative', 1);
+    }
 }
