@@ -29,9 +29,9 @@ class HomeController extends Controller
         return view('home', compact('talleres'));
     }
 
-    public function subscribe(Request $request)
+    public function subscribe(Taller $taller)
     {
-        dd($request->all());
+        dd($taller);
     }
 
     public function remove(Request $request)
