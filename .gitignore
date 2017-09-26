@@ -1,6 +1,5 @@
 composer.lock
 .idea/
-/vendor
 /storage
 /node_modules
 Homestead.yaml
