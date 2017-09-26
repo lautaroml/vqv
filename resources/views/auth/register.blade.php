@@ -55,10 +55,10 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('birthday') ? ' has-error' : '' }}">
-                                <label for="birthday" class="col-md-4 control-label">Edad</label>
+                                <label for="birthday" class="col-md-4 control-label">Fecha de nacimiento</label>
 
                                 <div class="col-md-6">
-                                    <input id="birthday" type="date" class="form-control" name="birthday" required>
+                                    <input id="birthday" type="text" class="form-control" name="birthday" placeholder="dd/mm/aaaa" required pattern="\d{1,2}/\d{1,2}/\d{4}">
 
                                     @if ($errors->has('birthday'))
                                         <span class="help-block">
