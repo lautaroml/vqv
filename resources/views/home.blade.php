@@ -33,7 +33,7 @@
                                         {{ $taller->name }}
                                     </td>
                                     <td>
-                                        {{ $taller->profesor }}
+                                        {{ $taller->professor }}
                                     </td>
                                     <td>
                                         {{ $taller->day_one }}
