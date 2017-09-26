@@ -67,6 +67,21 @@
                                     @endif
                                 </div>
                             </div>
+
+                            <div class="form-group{{ $errors->has('birthday') ? ' has-error' : '' }}">
+                                <label for="birthday" class="col-md-4 control-label">Fecha de nacimiento</label>
+
+                                <div class="col-md-6">
+                                    <select name="country" id="country" class="form-control">
+                                        <option value="volvo">Volvo</option>
+                                        <option value="saab">Saab</option>
+                                        <option value="mercedes">Mercedes</option>
+                                        <option value="audi">Audi</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
                         </div>
 
 
