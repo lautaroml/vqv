@@ -40,12 +40,12 @@
                                         @endif
                                     </td>
                                     <td>
-                                        @if($taller->day_two && $taller->day_one == 7)
+                                        @if($taller->day_two && $taller->day_two == 7)
                                             X
                                         @endif
                                     </td>
                                     <td>
-                                        @if($taller->day_three && $taller->day_one == 1)
+                                        @if($taller->day_three && $taller->day_three == 1)
                                             X
                                         @endif
                                     </td>
