@@ -17,5 +17,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/home', 'HomeController@subscribe')->name('subscribe');
+Route::get('/inscripcion', 'HomeController@index')->name('home');
+Route::get('/inscripcion/subscribe/{taller}', 'HomeController@subscribe')->name('subscribe');
+Route::get('/inscripcion/remove/{taller}', 'HomeController@remove')->name('remove');

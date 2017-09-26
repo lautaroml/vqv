@@ -50,12 +50,8 @@
                                         @endif
                                     </td>
                                     <td style="border-left: 1px solid">
-                                        <span class="btn btn-primary btn-xs">
-                                            <a href="/foo">Inscribirme</a>
-                                        </span>
-                                        <span class="btn btn-primary btn-xs">
-                                            <a href="foo">Eliminar inscripción</a>
-                                        </span>
+                                        <a class="btn btn-primary btn-xs" href="inscripcion/subscribe/{{  $taller->id }}">Inscribirme</a>
+                                        <a class="btn btn-primary btn-xs" href="inscripcion/remove/{{ $taller->id }}">Eliminar inscripción</a>
                                     </td>
                                 </tr>
                             @endforeach

@@ -29,8 +29,13 @@ class HomeController extends Controller
         return view('home', compact('talleres'));
     }
 
-    public function subscribe()
+    public function subscribe(Request $request)
     {
-        dd('subscribe');
+        dd($request->all());
+    }
+
+    public function remove(Request $request)
+    {
+        dd($request->all());
     }
 }
