@@ -35,17 +35,17 @@
                                         {{ $taller->professor }}
                                     </td>
                                     <td>
-                                        @if(in_array($taller->day_one, [6,7,1]))
+                                        @if($taller->day_one && $taller->day_one == 6)
                                             X
                                         @endif
                                     </td>
                                     <td>
-                                        @if(in_array($taller->day_two, [6,7,1]))
+                                        @if($taller->day_two && $taller->day_one == 7)
                                             X
                                         @endif
                                     </td>
                                     <td>
-                                        @if(in_array($taller->day_three, [6,7,1]))
+                                        @if($taller->day_three && $taller->day_one == 1)
                                             X
                                         @endif
                                     </td>
