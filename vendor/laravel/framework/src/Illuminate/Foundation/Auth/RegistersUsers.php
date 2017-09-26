@@ -18,7 +18,7 @@ trait RegistersUsers
      */
     public function showRegistrationForm()
     {
-        $countries = Country::all();
+        $countries = Country::all()->pluck('name', 'id')->toArray();
         return view('auth.register', compact('countries'));
     }
 

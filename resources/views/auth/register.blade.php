@@ -73,10 +73,9 @@
 
                                 <div class="col-md-6">
                                     <select name="country" id="country" class="form-control">
-                                        <option value="volvo">Volvo</option>
-                                        <option value="saab">Saab</option>
-                                        <option value="mercedes">Mercedes</option>
-                                        <option value="audi">Audi</option>
+                                        @foreach($countries as $id => $name)
+                                            <option value="{{ $id }}">{{ $name }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
