@@ -53,7 +53,7 @@ class HomeController extends Controller
     public function remove(Taller $taller)
     {
         $user = auth()->user();
-        $taller->users()->detached([$user->id]);
+        $taller->users()->detach([$user->id]);
         return redirect()->back()->with([
             'message_success' => 'Has eliminado tu inscripción del Taller: ' .$taller->name
         ]);
