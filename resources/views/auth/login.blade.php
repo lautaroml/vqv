@@ -59,7 +59,7 @@
                                     Recuperar contraseña?
                                 </a>
                                 <br>
-                                <p class="text-center">
+                                <p>
                                     No tenés una cuenta, <a href="{{ route('register') }}">registrate acá!</a>
                                 </p>
                             </div>
