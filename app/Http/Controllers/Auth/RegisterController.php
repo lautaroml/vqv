@@ -85,7 +85,7 @@ class RegisterController extends Controller
             'birthday' => Carbon::createFromFormat('d/m/Y',$data['birthday']),
             'country_id' => $data['country'],
             'state_id' => $data['state'],
-            'elenco' => $data['elenco'],
+            //'elenco' => $data['elenco'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
