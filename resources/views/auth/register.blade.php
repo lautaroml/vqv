@@ -33,7 +33,7 @@
                                 <label for="name" class="col-md-4 control-label">Apellido</label>
 
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control" name="last_name" value="{{ old('last_name') }}" required autofocus>
+                                    <input id="name" type="text" class="form-control" name="last_name" value="{{ old('last_name') }}" required>
 
                                     @if ($errors->has('name'))
                                         <span class="help-block">
@@ -157,6 +157,27 @@
                                     </select>
                                 </div>
                             </div>
+
+
+
+
+
+                            <div class="form-group{{ $errors->has('other') ? ' has-error' : '' }}" style="display: none">
+                                <label for="other" class="col-md-4 control-label">Provincia</label>
+
+                                <div class="col-md-6">
+                                    <input id="other" type="text" class="form-control" name="other" value="{{ old('other') }}" >
+
+                                    @if ($errors->has('other'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('other') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
+
+
 
                         </div>
 
