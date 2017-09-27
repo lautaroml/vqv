@@ -135,7 +135,7 @@
                                 <label for="country" class="col-md-4 control-label">País </label>
 
                                 <div class="col-md-6">
-                                    <select name="country" id="country" class="form-control">
+                                    <select required name="country" id="country" class="form-control">
                                         <option value="">Elija una opción</option>
                                         @foreach($countries as $id => $name)
                                             <option value="{{ $id }}">{{ $name }}</option>
@@ -148,7 +148,7 @@
                                 <label for="country" class="col-md-4 control-label">Provincia </label>
 
                                 <div class="col-md-6">
-                                    <select name="country" id="country" class="form-control" value="{{ old('country') }}">
+                                    <select required name="country" id="country" class="form-control" value="{{ old('country') }}">
                                         <option value="">Elija una opción</option>
                                         @foreach($states as $id => $name)
                                             <option value="{{ $id }}">{{ $name }}</option>
