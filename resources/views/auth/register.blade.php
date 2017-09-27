@@ -144,11 +144,11 @@
                                 </div>
                             </div>
 
-                            <div class="form-group{{ $errors->has('country') ? ' has-error' : '' }}">
-                                <label for="country" class="col-md-4 control-label">Provincia </label>
+                            <div class="form-group{{ $errors->has('state') ? ' has-error' : '' }}">
+                                <label for="state" class="col-md-4 control-label">Provincia </label>
 
                                 <div class="col-md-6">
-                                    <select required name="country" id="country" class="form-control" value="{{ old('country') }}">
+                                    <select required name="state" id="state" class="form-control" value="{{ old('state') }}">
                                         <option value="">Elija una opción</option>
                                         @foreach($states as $id => $name)
                                             <option value="{{ $id }}">{{ $name }}</option>
