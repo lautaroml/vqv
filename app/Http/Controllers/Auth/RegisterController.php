@@ -54,7 +54,7 @@ class RegisterController extends Controller
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'document' => 'required|max:255',
-            'age' => 'required|max:255',
+            'age' => 'required|max:255|numeric|between:13,19',
             'birthday' => 'required|max:255',
             'country' => 'required|max:255',
             'state' => 'required|max:255',
