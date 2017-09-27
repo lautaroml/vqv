@@ -13,6 +13,7 @@
 
 Route::get('/', function () {
     //return view('welcome');
+    dd($this->middleware('guest'));
     return view('auth.login');
 });
 
