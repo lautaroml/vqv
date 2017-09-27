@@ -31,4 +31,9 @@ class User extends Authenticatable
     {
         return $this->belongsToMany('App\Taller');
     }
+
+    public function has($id)
+    {
+        return $this->tallers()->find($id);
+    }
 }

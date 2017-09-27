@@ -29,7 +29,7 @@
                         </div>
                     @endif
 
-                    <h3>Elegí de entre los siguientes talleres:</h3>
+                    <h3 class="text-center">Elegí de entre los siguientes talleres:</h3>
 
                     <table class="table table-condensed table-hover">
                         <thead>
@@ -67,8 +67,11 @@
                                         @endif
                                     </td>
                                     <td style="border-left: 1px solid">
-                                        <a class="btn btn-primary btn-xs" href="inscripcion/subscribe/{{  $taller->id }}">Inscribirme</a>
-                                        <a class="btn btn-primary btn-xs" href="inscripcion/remove/{{ $taller->id }}">Eliminar inscripción</a>
+                                        @if(auth()->user()->has($taller->id))
+                                            <a class="btn btn-primary btn-xs" href="inscripcion/remove/{{ $taller->id }}">Eliminar inscripción</a>
+                                        @else
+                                            <a class="btn btn-primary btn-xs" href="inscripcion/subscribe/{{  $taller->id }}">Inscribirme</a>
+                                        @endif
                                     </td>
                                 </tr>
                             @endforeach

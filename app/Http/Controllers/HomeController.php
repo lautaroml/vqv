@@ -39,7 +39,7 @@ class HomeController extends Controller
 
         if ($taller->users->count() < $taller->cupo) {
             $user = auth()->user();
-            $taller->users()->attach([$user->id]);
+            $taller->users()->sync([$user->id]);
             return redirect()->back()->with([
                 'message_success' => 'Quedaste inscripto en el Taller: ' .$taller->name
             ]);
