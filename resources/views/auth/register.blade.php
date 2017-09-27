@@ -12,6 +12,8 @@
                         {{ csrf_field() }}
 
                         <div class="col-md-6">
+
+
                             <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
                                 <label for="first_name" class="col-md-4 control-label">Nombre</label>
 
@@ -21,6 +23,21 @@
                                     @if ($errors->has('first_name'))
                                         <span class="help-block">
                                         <strong>{{ $errors->first('first_name') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
+
+                            <div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
+                                <label for="name" class="col-md-4 control-label">Apellido</label>
+
+                                <div class="col-md-6">
+                                    <input id="name" type="text" class="form-control" name="last_name" value="{{ old('last_name') }}" required autofocus>
+
+                                    @if ($errors->has('name'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                     @endif
                                 </div>
@@ -68,36 +85,14 @@
                                 </div>
                             </div>
 
-                            <div class="form-group{{ $errors->has('country') ? ' has-error' : '' }}">
-                                <label for="country" class="col-md-4 control-label">Lugar de residencia - País </label>
 
-                                <div class="col-md-6">
-                                    <select name="country" id="country" class="form-control">
-                                        @foreach($countries as $id => $name)
-                                            <option value="{{ $id }}">{{ $name }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
                         </div>
 
 
 
 
                         <div class="col-md-6">
-                            <div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
-                                <label for="name" class="col-md-4 control-label">Apellido</label>
 
-                                <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control" name="last_name" value="{{ old('last_name') }}" required autofocus>
-
-                                    @if ($errors->has('name'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
 
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                 <label for="email" class="col-md-4 control-label">E-Mail</label>
@@ -135,14 +130,30 @@
                                 </div>
                             </div>
 
+
                             <div class="form-group{{ $errors->has('country') ? ' has-error' : '' }}">
-                                <label for="country" class="col-md-4 control-label">Lugar de residencia - País </label>
+                                <label for="country" class="col-md-4 control-label">País </label>
 
                                 <div class="col-md-6">
                                     <select name="country" id="country" class="form-control">
+                                        <option value="">Elija una opción</option>
+                                        @foreach($countries as $id => $name)
+                                            <option value="{{ $id }}">{{ $name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group{{ $errors->has('country') ? ' has-error' : '' }}">
+                                <label for="country" class="col-md-4 control-label">Provincia </label>
+
+                                <div class="col-md-6">
+                                    <select name="country" id="country" class="form-control">
+                                        <option value="">Elija una opción</option>
                                         @foreach($states as $id => $name)
                                             <option value="{{ $id }}">{{ $name }}</option>
                                         @endforeach
+                                            <option value="other">Otro</option>
                                     </select>
                                 </div>
                             </div>
