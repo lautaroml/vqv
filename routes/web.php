@@ -13,8 +13,14 @@
 
 Route::get('/', function () {
     //return view('welcome');
-    dd($this->middleware('guest'));
-    return view('auth.login');
+    if ( auth()->guest() ) {
+        return view('auth.login');
+    } else {
+        $talleres = \App\Taller::all();
+
+        return view('home', compact('talleres'));
+    }
+
 });
 
 Auth::routes();
