@@ -19,11 +19,8 @@ class AddColumnUserTable extends Migration
             $table->string('document');
             $table->integer('age');
             $table->date('birthday');
-            $table->string('email')->unique();
-            $table->string('password');
             $table->unsignedInteger('country_id');
             $table->unsignedInteger('state_id');
-            $table->unsignedInteger('city_id');
             $table->string('elenco');
         });
     }
