@@ -104,6 +104,7 @@ return [
             'rule-name' => 'custom-message',
             'confirmed'            => 'Las contraseñas no coinciden.',
         ],
+        'confirmed'            => 'Las contraseñas no coinciden.'
     ],
 
     /*
