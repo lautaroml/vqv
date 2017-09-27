@@ -31,11 +31,20 @@ class HomeController extends Controller
 
     public function subscribe(Taller $taller)
     {
-        dd($taller);
+        if ($taller->users->count() < $taller->cupo)
+        {
+            $user = auth()->user();
+            $taller->users()->attach([$user->id]);
+            dd('inscripcion ok');
+        }
+
+        dd('no hay mas cupo');
     }
 
-    public function remove(Request $request)
+    public function remove(Taller $taller)
     {
-        dd($request->all());
+        $user = auth()->user();
+        $taller->users()->detached([$user->id]);
+        return redirect()->back();
     }
 }
