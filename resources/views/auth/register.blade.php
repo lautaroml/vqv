@@ -30,14 +30,14 @@
 
 
                             <div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
-                                <label for="name" class="col-md-4 control-label">Apellido</label>
+                                <label for="last_name" class="col-md-4 control-label">Apellido</label>
 
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control" name="last_name" value="{{ old('last_name') }}" required>
+                                    <input id="last_name" type="text" class="form-control" name="last_name" value="{{ old('last_name') }}" required>
 
-                                    @if ($errors->has('name'))
+                                    @if ($errors->has('last_name'))
                                         <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('last_name') }}</strong>
                                     </span>
                                     @endif
                                 </div>
@@ -61,7 +61,7 @@
                                 <label for="age" class="col-md-4 control-label">Edad</label>
 
                                 <div class="col-md-6">
-                                    <input id="age" type="number" class="form-control" name="age" required>
+                                    <input id="age" type="number" class="form-control" name="age" value="{{ old('age') }}" required>
 
                                     @if ($errors->has('age'))
                                         <span class="help-block">
@@ -75,7 +75,7 @@
                                 <label for="birthday" class="col-md-4 control-label">Fecha de nacimiento</label>
 
                                 <div class="col-md-6">
-                                    <input id="birthday" type="text" class="form-control" name="birthday" placeholder="dd/mm/aaaa" required pattern="\d{1,2}/\d{1,2}/\d{4}">
+                                    <input id="birthday" value="{{ old('birthday') }}" type="text" class="form-control" name="birthday" placeholder="dd/mm/aaaa" required pattern="\d{1,2}/\d{1,2}/\d{4}">
 
                                     @if ($errors->has('birthday'))
                                         <span class="help-block">
@@ -148,7 +148,7 @@
                                 <label for="country" class="col-md-4 control-label">Provincia </label>
 
                                 <div class="col-md-6">
-                                    <select name="country" id="country" class="form-control">
+                                    <select name="country" id="country" class="form-control" value="{{ old('country') }}">
                                         <option value="">Elija una opción</option>
                                         @foreach($states as $id => $name)
                                             <option value="{{ $id }}">{{ $name }}</option>
@@ -166,7 +166,7 @@
                                 <label for="other" class="col-md-4 control-label">Provincia</label>
 
                                 <div class="col-md-6">
-                                    <input id="other" type="text" class="form-control" name="other" value="{{ old('other') }}" >
+                                    <input id="other" value="{{ old('other') }}" type="text" class="form-control" name="other" value="{{ old('other') }}" >
 
                                     @if ($errors->has('other'))
                                         <span class="help-block">
