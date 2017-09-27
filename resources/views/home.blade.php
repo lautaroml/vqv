@@ -12,6 +12,23 @@
                         </div>
                     @endif
 
+                    @if(Session::has('message_success'))
+                        <div class="alert alert-aquamarine alert-border-left alert-close alert-dismissible fade in" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <strong>¡Éxito!</strong> {!! Session::get('message_success') !!}
+                        </div>
+                    @endif
+                    @if(Session::has('message_error'))
+                        <div class="alert alert-danger alert-border-left alert-close alert-dismissible fade in" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <strong>¡Atención!</strong> {!! Session::get('message_error') !!}
+                        </div>
+                    @endif
+
                     <h3>Elegí de entre los siguientes talleres:</h3>
 
                     <table class="table table-condensed table-hover">

@@ -35,16 +35,22 @@ class HomeController extends Controller
         {
             $user = auth()->user();
             $taller->users()->attach([$user->id]);
-            dd('inscripcion ok');
+            return redirect()->back()->with([
+                'message_success' => 'Quedaste inscripto en el Taller: ' .$taller->name
+            ]);
         }
 
-        dd('no hay mas cupo');
+        return redirect()->back()->with([
+            'message_error' => 'El Taller: ' .$taller->name . ' no tiene mas cupo'
+        ]);
     }
 
     public function remove(Taller $taller)
     {
         $user = auth()->user();
         $taller->users()->detached([$user->id]);
-        return redirect()->back();
+        return redirect()->back()->with([
+            'message_success' => 'Has eliminado tu inscripción del Taller: ' .$taller->name
+        ]);
     }
 }
