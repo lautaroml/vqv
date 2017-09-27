@@ -67,13 +67,6 @@
                                         @endif
                                     </td>
                                     <td style="border-left: 1px solid">
-
-
-                                        @if(auth()->user()->tallers->count())
-                                            {{ auth()->user()->tallers->count() }}
-                                        @endif
-
-
                                         @if(auth()->user()->has($taller->id))
                                             <a class="btn btn-danger btn-xs" href="inscripcion/remove/{{ $taller->id }}">Eliminar inscripción</a>
                                         @else
