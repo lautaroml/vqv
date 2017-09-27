@@ -31,7 +31,7 @@ trait RegistersUsers
      * @return \Illuminate\Http\Response
      */
     public function register(Request $request)
-    {dd(1);
+    {
         $this->validator($request->all())->validate();
 dd(1);
         event(new Registered($user = $this->create($request->all())));
