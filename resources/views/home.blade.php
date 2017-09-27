@@ -34,17 +34,22 @@
                     <table class="table table-condensed table-hover">
                         <thead>
                             <tr>
+                                <th></th>
                                 <th>Nombre</th>
                                 <th>Profesor</th>
                                 <th>Sabado</th>
                                 <th>Domingo</th>
                                 <th>Lunes</th>
+                                <th>Compatible con:</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach($talleres as $taller)
                                 <tr>
+                                    <td>
+                                        {{ $taller->id }}
+                                    </td>
                                     <td>
                                         {{ $taller->name }}
                                     </td>
@@ -65,6 +70,9 @@
                                         @if($taller->day_three)
                                             X
                                         @endif
+                                    </td>
+                                    <td>
+                                        {{ implode(',', $taller->compatibilities->pluck('external_taller_id')->toArray()) }}
                                     </td>
                                     <td style="border-left: 1px solid">
                                         @if(auth()->user()->has($taller->id))
