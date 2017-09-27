@@ -3,6 +3,7 @@
 namespace Illuminate\Foundation\Auth;
 
 use App\Country;
+use App\State;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Events\Registered;
@@ -19,7 +20,8 @@ trait RegistersUsers
     public function showRegistrationForm()
     {
         $countries = Country::all()->pluck('name', 'id')->toArray();
-        return view('auth.register', compact('countries'));
+        $states = State::all()->pluck('name', 'id')->toArray();
+        return view('autregister', compact('countries', 'states'));
     }
 
     /**
