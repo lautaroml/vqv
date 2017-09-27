@@ -36,4 +36,9 @@ class User extends Authenticatable
     {
         return $this->tallers()->find($id);
     }
+
+    /*public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPasswordNotification($token));
+    }*/
 }
