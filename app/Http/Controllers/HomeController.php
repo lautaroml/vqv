@@ -31,8 +31,13 @@ class HomeController extends Controller
 
     public function subscribe(Taller $taller)
     {
-        if ($taller->users->count() < $taller->cupo)
-        {
+        if (auth()->user()->tallers->count() == 2) {
+            return redirect()->back()->with([
+                'message_error' => 'No podes inscribirte a más de dos Talleres'
+            ]);
+        }
+
+        if ($taller->users->count() < $taller->cupo) {
             $user = auth()->user();
             $taller->users()->attach([$user->id]);
             return redirect()->back()->with([
