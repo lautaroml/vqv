@@ -21,7 +21,7 @@ trait RegistersUsers
     {
         $countries = Country::all()->pluck('name', 'id')->toArray();
         $states = State::all()->pluck('name', 'id')->toArray();
-        return view('autregister', compact('countries', 'states'));
+        return view('auth.register', compact('countries', 'states'));
     }
 
     /**
