@@ -38,7 +38,7 @@ class HomeController extends Controller
         }
 
         if (auth()->user()->tallers->count()) {
-            $comp = $taller->compatibilities->pluck('external_taller_id');
+            $comp = $taller->compatibilities->pluck('external_taller_id')->toArray();
             dd($comp);
             if (! in_array(auth()->user()->tallers->first()->id, $comp)) {
                 return redirect()->back()->with([
