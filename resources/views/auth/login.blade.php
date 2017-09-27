@@ -58,6 +58,9 @@
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     Recuperar contraseña?
                                 </a>
+                                <p>
+                                    No tenés una cuenta, <a href="{{ route('register') }}">registrate acá!</a>
+                                </p>
                             </div>
                         </div>
                     </form>
