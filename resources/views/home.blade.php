@@ -13,7 +13,7 @@
                     @endif
 
                     @if(Session::has('message_success'))
-                        <div class="alert alert-aquamarine alert-border-left alert-close alert-dismissible fade in" role="alert">
+                        <div class="alert alert-success alert-border-left alert-close alert-dismissible fade in" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">×</span>
                             </button>
