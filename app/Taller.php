@@ -21,5 +21,9 @@ class Taller extends Model
         return $this->hasMany('App\Compatibility')->where('negative', 1);
     }
 
+    public function isCompatible($user)
+    {
+         $comp = $this->compatibilities->pluck('external_taller_id');
+    }
 
 }

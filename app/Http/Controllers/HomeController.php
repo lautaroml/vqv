@@ -37,6 +37,15 @@ class HomeController extends Controller
             ]);
         }
 
+        if (auth()->user()->tallers->count()) {
+            $comp = $taller->compatibilities->pluck('external_taller_id');
+            if (! in_array($comp, auth()->user()->tallers->first()->id)) {
+                return redirect()->back()->with([
+                    'message_error' => 'El taller: ' . $taller->name . ' no es compatible con: ' . auth()->user()->tallers->first()->name
+                ]);
+            }
+        }
+
         if ($taller->users->count() < $taller->cupo) {
             $user = auth()->user();
             $taller->users()->sync([$user->id]);
