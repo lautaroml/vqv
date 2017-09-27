@@ -50,11 +50,12 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        $age = 19;
         return Validator::make($data, [
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'document' => 'required|max:255',
-            'age' => 'required|max:255|numeric|between:13,19',
+            'age' => 'required|max:255|numeric|between:13,' .$age,
             'birthday' => 'required|max:255',
             'country' => 'required|max:255',
             'state' => 'required|max:255',
