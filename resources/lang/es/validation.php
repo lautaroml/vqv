@@ -102,6 +102,7 @@ return [
     'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
+            'confirmed'            => 'Las contraseñas no coinciden.',
         ],
     ],
 
