@@ -71,7 +71,7 @@
                                             X
                                         @endif
                                     </td>
-                                    <td>
+                                    <td style="border-left: 1px solid">
                                         {{ implode(',', $taller->compatibilities->pluck('external_taller_id')->toArray()) }}
                                     </td>
                                     <td style="border-left: 1px solid">
