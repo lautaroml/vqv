@@ -51,6 +51,11 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         $age = 19;
+        if (isset($data['elenco'])) {
+            if (strlen($data['elenco']) > 0) {
+                $age = 21;
+            }
+        }
         return Validator::make($data, [
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
@@ -80,6 +85,7 @@ class RegisterController extends Controller
             'birthday' => Carbon::createFromFormat('d/m/Y',$data['birthday']),
             'country_id' => $data['country'],
             'state_id' => $data['state'],
+            'elenco' => $data['elenco'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
