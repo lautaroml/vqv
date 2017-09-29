@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="links">
-                    La inscripción será habilitada el día sábado 30.
+                    La inscripciónse habilitará el 30 de septiembre a partir de las 16 hs.
                 </div>
             </div>
         </div>
