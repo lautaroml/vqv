@@ -12,7 +12,9 @@
 */
 
 Route::get('/', function () {
-    //return view('welcome');
+    //TODO:remove next line.
+    return view('welcome');
+
     if ( auth()->guest() ) {
         return view('auth.login');
     } else {
