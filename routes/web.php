@@ -25,8 +25,8 @@ Route::get('/', function () {
 
 });
 
-Auth::routes();
-
-Route::get('/inscripcion', 'HomeController@index')->name('home');
-Route::get('/inscripcion/subscribe/{taller}', 'HomeController@subscribe')->name('subscribe');
-Route::get('/inscripcion/remove/{taller}', 'HomeController@remove')->name('remove');
+// TODO: Uncomment this.
+//Auth::routes();
+//Route::get('/inscripcion', 'HomeController@index')->name('home');
+//Route::get('/inscripcion/subscribe/{taller}', 'HomeController@subscribe')->name('subscribe');
+//Route::get('/inscripcion/remove/{taller}', 'HomeController@remove')->name('remove');
