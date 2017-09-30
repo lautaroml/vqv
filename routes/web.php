@@ -31,7 +31,18 @@ Route::get('/inscripcion/subscribe/{taller}', 'HomeController@subscribe')->name(
 Route::get('/inscripcion/remove/{taller}', 'HomeController@remove')->name('remove');
 
 
-
+Route::get('/home', function () {
+    $hoy = getdate();
+    if ($hoy['mon'] == 9 && $hoy['mday'] == 30 && $hoy['hours'] >= 19) {
+        if ( auth()->guest() ) {
+            return view('auth.login');
+        } else {
+            $talleres = \App\Taller::all();
+            return view('home', compact('talleres'));
+        }
+    }
+    return view('welcome');
+});
 
 
 Route::get('/prueba_mid', function () {
