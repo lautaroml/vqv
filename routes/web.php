@@ -126,7 +126,7 @@ Route::get('/results/{id}/report', function ($id) {
         fclose($handle);
     }, 200, [
         'Content-Type' => 'text/csv',
-        'Content-Disposition' => 'attachment; filename="'.  $taller. '_'. time() .'.csv"',
+        'Content-Disposition' => 'attachment; filename="'.  $taller->name. '_'. time() .'.csv"',
     ]);
     return $response;
     }
