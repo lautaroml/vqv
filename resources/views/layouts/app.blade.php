@@ -13,7 +13,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset('css/ladda-theme.scss') }}">
+    <link rel="stylesheet" href="{{ asset('ladda-theme.css') }}">
     <script src="{{ asset('js/spin.js') }}"></script>
     <script src="{{ asset('js/ladda.js') }}"></script>
 
