@@ -13,8 +13,7 @@
 
 Route::get('/', function () {
     //TODO:remove next line.
-    $hoy = getdate();
-    return view('welcome', compact('hoy'));
+    return view('welcome');
 
     if ( auth()->guest() ) {
         return view('auth.login');

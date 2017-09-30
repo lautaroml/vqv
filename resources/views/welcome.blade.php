@@ -89,6 +89,3 @@
         </div>
     </body>
 </html>
-<script>
-    console.log({{$hoy['hours']}})
-</script>
