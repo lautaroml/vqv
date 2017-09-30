@@ -14,7 +14,7 @@ class UpTime
      * @return mixed
      */
     public function handle($request, Closure $next)
-    {
+    {dd(1);
         $hoy = getdate();
         if ($hoy['mon'] == 9 && $hoy['mday'] == 30 && $hoy['hours'] >= 19) {
             return $next($request);
