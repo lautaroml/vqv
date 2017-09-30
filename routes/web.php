@@ -46,4 +46,4 @@ Route::get('/prueba_mid', function () {
         }
     }
     return view('welcome');
-})->middleware('up_date');
+});
