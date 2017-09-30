@@ -85,7 +85,7 @@
                                                 <button class="btn btn-danger btn-xs ladda-button" data-style="expand-left"><span class="ladda-label">Eliminar inscripción</span></button>
                                             </a>
                                         @else
-                                            <a href="#" class="btn btn-primary btn-xs ladda-button" data-style="expand-left"><span class="ladda-label">Inscribirme</span></a>
+                                            <a href="inscripcion/subscribe/{{  $taller->id }}" class="btn btn-primary btn-xs ladda-button" data-style="expand-left"><span class="ladda-label">Inscribirme</span></a>
                                         @endif
                                     </td>
                                 </tr>
