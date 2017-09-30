@@ -13,7 +13,6 @@
                     <table class="table table-condensed table-hover">
                         <thead>
                             <tr>
-                                <th></th>
                                 <th>Nombre</th>
                                 <th>Apellido</th>
                                 <th>Documento</th>
