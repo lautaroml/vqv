@@ -32,8 +32,8 @@
                                     <td>{{$user->document}}</td>
                                     <td>{{$user->email}}</td>
                                     <td>{{$user->age}}</td>
-                                    <td>{{explode('-', (string) $user->birthday)[2]}} / {{explode('-',  (string) $user->birthday)[1]}} / {{explode('-',  (string) $user->birthday)[0]}}</td>
-                                    <td>{{$user->country_id}}</td>
+                                    <td>{{explode('-', (string) $user->birthday)[2]}}/{{explode('-',  (string) $user->birthday)[1]}}/{{explode('-',  (string) $user->birthday)[0]}}</td>
+                                    <td>{{\App\Country::find($user->country_id)->name}}</td>
                                     <td>{{$user->state_id}}</td>
                                     <td>{{$user->elenco}}</td>
                                 </tr>
