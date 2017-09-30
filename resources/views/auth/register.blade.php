@@ -176,7 +176,7 @@
                                         </select>
                                     </div>
                                 </div>
-<h1>{{ old('state') }}</h1>
+
                                 <div class="form-group{{ $errors->has('state') ? ' has-error' : '' }}">
                                     <label for="state" class="col-md-4 control-label">Provincia </label>
 
@@ -184,7 +184,7 @@
                                         <select required name="state" id="state" class="form-control">
                                             <option value="">Elija una opción</option>
                                             @foreach($states as $id => $name)
-                                                <option value="{{ $id }} {{ ( old('state')  == $id ? "selected":"") }}">{{ $name }}</option>
+                                                <option value="{{ $id }}" {{ ( old('state')  == $id ? "selected":"") }}>{{ $name }}</option>
                                             @endforeach
                                             <option value="other">Otro</option>
                                         </select>
