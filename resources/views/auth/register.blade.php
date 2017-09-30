@@ -210,14 +210,16 @@
 
                     </div>
 
-                    <div class="form-group pull-right">
-                        <div>
-                            <button type="submit" class="btn btn-primary">
-                                Confirmar
-                            </button>
+                        <div class="row">
+                            <div class="form-group pull-right">
+                                <div>
+                                    <button type="submit" class="btn btn-primary">
+                                        Confirmar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-
+                        
                     </form>
                 </div>
             </div>
