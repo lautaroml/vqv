@@ -13,9 +13,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset('css/ladda-theme.css') }}">
+    {{--<link rel="stylesheet" href="{{ asset('css/ladda-theme.css') }}">
     <script src="{{ asset('js/spin.js') }}"></script>
-    <script src="{{ asset('js/ladda.js') }}"></script>
+    <script src="{{ asset('js/ladda.js') }}"></script>--}}
 
 
     @yield('styles')

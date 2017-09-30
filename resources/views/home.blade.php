@@ -76,16 +76,9 @@
                                     </td>
                                     <td style="border-left: 1px solid">
                                         @if(auth()->user()->has($taller->id))
-                                            <button class="btn btn-danger btn-xs ladda-button" data-style="expand-left"><span class="ladda-label">
-                                                    <a href="inscripcion/remove/{{ $taller->id }}">Eliminar inscripción</a>
-                                                </span>
-                                            </button>
-                                            <br>
-                                            <a class="btn btn-danger btn-xs ladda-button" href="inscripcion/remove/{{ $taller->id }}">
-                                                <button class="btn btn-danger btn-xs ladda-button" data-style="expand-left"><span class="ladda-label">Eliminar inscripción</span></button>
-                                            </a>
+                                            <a class="btn btn-danger btn-xs" href="inscripcion/remove/{{ $taller->id }}">Eliminar inscripción</a>
                                         @else
-                                            <a href="inscripcion/subscribe/{{  $taller->id }}" class="btn btn-primary btn-xs ladda-button" data-style="expand-left"><span class="ladda-label">Inscribirme</span></a>
+                                            <a class="btn btn-primary btn-xs" href="inscripcion/subscribe/{{  $taller->id }}">Inscribirme</a>
                                         @endif
                                     </td>
                                 </tr>
