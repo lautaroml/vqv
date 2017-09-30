@@ -76,7 +76,10 @@
                                     </td>
                                     <td style="border-left: 1px solid">
                                         @if(auth()->user()->has($taller->id))
-                                            <a class="btn btn-danger btn-xs ladda-button" href="inscripcion/remove/{{ $taller->id }}">Eliminar inscripción</a>
+
+                                            <a class="btn btn-danger btn-xs ladda-button" href="inscripcion/remove/{{ $taller->id }}">
+                                                <button class="btn btn-danger btn-xs ladda-button" data-style="expand-left"><span class="ladda-label">Eliminar inscripción</span></button>
+                                            </a>
                                         @else
                                             <a class="btn btn-primary btn-xs ladda-button" href="inscripcion/subscribe/{{  $taller->id }}">Inscribirme</a>
                                         @endif
