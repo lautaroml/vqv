@@ -70,7 +70,7 @@ Route::get('/results/{id}/view', function ($id) {
     if (auth()->user()->email == 'lautaroml@hotmail.com') {
         $taller = \App\Taller::find($id);
         $users = \App\User::all();
-        return view('results', compact('taller', 'users'));
+        return view('view', compact('taller', 'users'));
     }
     return redirect()->route('home');
 });
