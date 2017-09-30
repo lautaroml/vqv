@@ -37,7 +37,7 @@ Route::get('/', function () {
 
 Route::get('/prueba_mid', function () {
     $hoy = getdate();
-    if ($hoy['mon'] == 9 && $hoy['mday'] == 30 && $hoy['hours'] >= 19) {
+    if ($hoy['mon'] == 9 && $hoy['mday'] == 30 && $hoy['hours'] >= 13) {
         if ( auth()->guest() ) {
             return view('auth.login');
         } else {
