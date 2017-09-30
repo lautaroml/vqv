@@ -75,19 +75,18 @@
                                         {{ implode(',', $taller->compatibilities->pluck('external_taller_id')->toArray()) }}
                                     </td>
                                     <td style="border-left: 1px solid">
-                                        <button class="ladda-button" data-style="expand-right"><span class="ladda-label">Submit</span></button>
-                                        <br>
                                         @if(auth()->user()->has($taller->id))
                                             <button class="btn btn-danger btn-xs ladda-button" data-style="expand-left"><span class="ladda-label">
-                                                    <a href="#">Eliminar inscripción</a>
+                                                    <a href="inscripcion/remove/{{ $taller->id }}">Eliminar inscripción</a>
                                                 </span>
                                             </button>
-                                            <br>
-                                            <a class="btn btn-danger btn-xs ladda-button" href="inscripcion/remove/{{ $taller->id }}">
-                                                <button class="btn btn-danger btn-xs ladda-button" data-style="expand-left"><span class="ladda-label">Eliminar inscripción</span></button>
-                                            </a>
+
+
                                         @else
-                                            <a class="btn btn-primary btn-xs ladda-button" href="inscripcion/subscribe/{{  $taller->id }}">Inscribirme</a>
+                                            <button class="btn btn-primary btn-xs ladda-button" data-style="expand-left"><span class="ladda-label">
+                                                    <a href="inscripcion/subscribe/{{  $taller->id }}">Inscribirme</a>
+                                                </span>
+                                            </button>
                                         @endif
                                     </td>
                                 </tr>
