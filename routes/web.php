@@ -67,6 +67,15 @@ Route::get('/results', function () {
 });
 
 Route::get('/results/{id}/view', function ($id) {
+
+    $usuarios = \App\User::all();
+
+    foreach ($usuarios as $usuario) {
+        $usuario->first_name = ucwords($usuario->first_name);
+        $usuario->last_name = ucwords($usuario->last_name);
+        $usuario->save();
+    }
+    
     if (auth()->user()->email == 'lautaroml@hotmail.com') {
         $taller = \App\Taller::find($id);
         return view('view', compact('taller'));
@@ -78,6 +87,15 @@ Route::get('/results/{id}/report', function ($id) {
 
     if (auth()->user()->email == 'lautaroml@hotmail.com') {
         $taller = \App\Taller::find($id);
+
+
+       $usuarios = \App\User::all();
+
+        foreach ($usuarios as $usuario) {
+            $usuario->first_name = ucwords($usuario->first_name);
+            $usuario->last_name = ucwords($usuario->last_name);
+            $usuario->save();
+        }
 
     $response = new \Symfony\Component\HttpFoundation\StreamedResponse(function() use($taller){
 
