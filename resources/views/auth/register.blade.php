@@ -176,7 +176,7 @@
                                         </select>
                                     </div>
                                 </div>
-
+<h1>{{ old('state') }}</h1>
                                 <div class="form-group{{ $errors->has('state') ? ' has-error' : '' }}">
                                     <label for="state" class="col-md-4 control-label">Provincia </label>
 
