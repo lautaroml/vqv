@@ -69,10 +69,10 @@
             <div class="content">
                 <div class="title m-b-md">
                     Vamos que venimos
+                    <p>Hola {{ $user->first_name }} </p>
                 </div>
 
                 <div class="links">
-                    <p>Hola {{ $user->first_name }} </p>
                     Quedaste inscripto al taller: {{ $taller }}
                 </div>
             </div>
