@@ -12,17 +12,16 @@
 */
 
 Route::get('/', function () {
-    //TODO:remove next line.
-    return view('welcome');
-
-    if ( auth()->guest() ) {
-        return view('auth.login');
-    } else {
-        $talleres = \App\Taller::all();
-
-        return view('home', compact('talleres'));
+    $hoy = getdate();
+    if ($hoy['mon'] == 9 && $hoy['mday'] == 30 && $hoy['hours'] >= 19) {
+        if ( auth()->guest() ) {
+            return view('auth.login');
+        } else {
+            $talleres = \App\Taller::all();
+            return view('home', compact('talleres'));
+        }
     }
-
+    return view('welcome');
 });
 
 // TODO: Uncomment this.
@@ -37,7 +36,7 @@ Route::get('/inscripcion/remove/{taller}', 'HomeController@remove')->name('remov
 
 Route::get('/prueba_mid', function () {
     $hoy = getdate();
-    if ($hoy['mon'] == 9 && $hoy['mday'] == 30 && $hoy['hours'] >= 13) {
+    if ($hoy['mon'] == 9 && $hoy['mday'] == 30 && $hoy['hours'] >= 19) {
         if ( auth()->guest() ) {
             return view('auth.login');
         } else {
