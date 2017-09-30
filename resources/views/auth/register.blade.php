@@ -229,17 +229,17 @@
 @section('javascript')
     <script>
         if ($("#other_container").is(":visible") ) {
-            $("#other_container").attr('required', true);
+            $("#other").prop('required', true);
         } else {
-            $("#other_container").attr('required', false);
+            $("#other").prop('required', false);
         }
         $("#state").change(function(){
             if ($(this).val() == 'other') {
-                $("#other_container").attr('required', true);
                 $("#other_container").show();
+                $("#other").prop('required', true);
             } else {
                 $("#other_container").hide();
-                $("#other_container").attr('required', false);
+                $("#other").prop('required', false);
             }
         });
 
