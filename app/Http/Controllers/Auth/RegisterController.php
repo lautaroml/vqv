@@ -78,7 +78,7 @@ class RegisterController extends Controller
      * @return \App\User
      */
     protected function create(array $data)
-    {
+    {dd($data['other']);
         /*if ( $data['state'] == 'other') {
             $data['state'] = $data['other'];
         }*/
