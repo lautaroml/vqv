@@ -191,9 +191,6 @@
                                 </div>
 
 
-
-
-
                                 <div id="other_container" class="form-group{{ $errors->has('other') ? ' has-error' : '' }}" style="display: none">
                                     <label for="other" class="col-md-4 control-label">Provincia</label>
 

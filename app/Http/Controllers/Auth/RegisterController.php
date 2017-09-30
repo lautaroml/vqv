@@ -66,6 +66,8 @@ class RegisterController extends Controller
             'state' => 'required|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'elenco' => 'required',
+            'other' => 'required_if:state,other',
         ]);
     }
 
@@ -85,7 +87,7 @@ class RegisterController extends Controller
             'birthday' => Carbon::createFromFormat('d/m/Y',$data['birthday']),
             'country_id' => $data['country'],
             'state_id' => $data['state'],
-            //'elenco' => $data['elenco'],
+            'elenco' => $data['elenco'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
