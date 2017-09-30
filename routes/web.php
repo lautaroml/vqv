@@ -63,5 +63,5 @@ Route::get('/results', function () {
         $talleres = \App\Taller::all();
         return view('results', compact('talleres'));
     }
-    return route('home');
+    return redirect()->route('home');
 });
