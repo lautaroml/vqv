@@ -43,6 +43,22 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
+                        <?php
+                        $emails = [
+                            'patapufete@gmail.com',
+                            'lautaroml@hotmail.com'
+                        ];
+                        ?>
+                        @guest
+                        @else
+                           @if((in_array(Auth::user()->email, $emails)))
+                                <li>
+                                    <a href="http://184.75.254.174/results">
+                                        Resultados
+                                    </a>
+                                </li>
+                            @endif
+                        @endguest
                         &nbsp;
                     </ul>
 
