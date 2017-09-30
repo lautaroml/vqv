@@ -75,8 +75,13 @@ Route::get('/results/{id}/view', function ($id) {
         $usuario->last_name = ucwords($usuario->last_name);
         $usuario->save();
     }
-    
-    if (auth()->user()->email == 'lautaroml@hotmail.com') {
+
+    $emails = [
+        'patapufete@gmail.com',
+        'lautaroml@hotmail.com'
+    ];
+
+    if (in_array(auth()->user()->email, $emails)) {
         $taller = \App\Taller::find($id);
         return view('view', compact('taller'));
     }
@@ -85,7 +90,12 @@ Route::get('/results/{id}/view', function ($id) {
 
 Route::get('/results/{id}/report', function ($id) {
 
-    if (auth()->user()->email == 'lautaroml@hotmail.com') {
+    $emails = [
+        'patapufete@gmail.com',
+        'lautaroml@hotmail.com'
+    ];
+
+    if (in_array(auth()->user()->email, $emails)) {
         $taller = \App\Taller::find($id);
 
 
