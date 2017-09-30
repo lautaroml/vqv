@@ -49,13 +49,15 @@ class RegisterController extends Controller
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
-    {dd($data['elenco']);
+    {
         $age = 19;
         if (isset($data['elenco'])) {
-            if (strlen($data['elenco']) > 0) {
+            if (strlen($data['elenco']) > 0 && ($data['elenco']) != 0) {
                 $age = 21;
             }
         }
+
+        dd($age);
         return Validator::make($data, [
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
