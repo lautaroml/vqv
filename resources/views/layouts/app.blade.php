@@ -54,7 +54,7 @@
                            @if((in_array(Auth::user()->email, $emails)))
                                 <li>
                                     <a href="http://184.75.254.174/results">
-                                        Resultados
+                                        <b>Resultados</b>
                                     </a>
                                 </li>
                             @endif
