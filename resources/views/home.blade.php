@@ -94,6 +94,8 @@
 
 @section('javascript')
     <script>
-
+        $('.btn').click( function(){
+            $('.btn').addClass( "disabled" );
+        })
     </script>
 @endsection
