@@ -89,3 +89,6 @@
         </div>
     </body>
 </html>
+<script>
+    console.log({{$hoy}})
+</script>
