@@ -59,9 +59,10 @@ Route::get('/prueba_mid', function () {
 });
 
 Route::get('/results', function () {
-    if (auth()->user()->email == 'lautaroml@hotmaisl.com') {
+    if (auth()->user()->email == 'lautaroml@hotmail.com') {
         $talleres = \App\Taller::all();
         return view('results', compact('talleres'));
     }
-    return view('welcome');
+    $talleres = \App\Taller::all();
+    return view('home', compact('talleres'));
 });
