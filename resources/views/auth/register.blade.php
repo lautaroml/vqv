@@ -181,10 +181,10 @@
                                     <label for="state" class="col-md-4 control-label">Provincia </label>
 
                                     <div class="col-md-6">
-                                        <select required name="state" id="state" class="form-control" value="{{ old('state') }}">
-                                            <option value="">Elija una opción</option> {{ dd(old("state")) }}
+                                        <select required name="state" id="state" class="form-control">
+                                            <option value="">Elija una opción</option> {{ dd( old('state')  ) }}
                                             @foreach($states as $id => $name)
-                                                <option value="{{ $id }} {{ (old("state") == $name ? "selected":"") }}">{{ $name }}</option>
+                                                <option value="{{ $id }} {{ ( old('state')  == $name ? "selected":"") }}">{{ $name }}</option>
                                             @endforeach
                                             <option value="other">Otro</option>
                                         </select>
