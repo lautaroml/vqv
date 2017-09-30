@@ -90,7 +90,7 @@
 
 
 
-                                <div class="form-group{{ $errors->has('elenco_bool') ? ' has-error' : '' }}">
+                                {{--<div class="form-group{{ $errors->has('elenco_bool') ? ' has-error' : '' }}">
                                     <label for="elenco_bool" class="col-md-4 control-label">¿Pertenece a un elenco que forma parte de este 9na Edición de VQV? </label>
                                     <div class="col-md-6">
                                         <select required name="elenco_bool" id="elenco_bool" class="form-control" value="{{ old('elenco_bool') }}">
@@ -99,17 +99,20 @@
                                             <option value="0">No</option>
                                         </select>
                                     </div>
-                                </div>
+                                </div>--}}
 
 
-                                <div id="elenco_container" class="form-group{{ $errors->has('elenco') ? ' has-error' : '' }}" style="display: none;">
+                                <div id="elenco_container" class="form-group{{ $errors->has('elenco') ? ' has-error' : '' }}" {{--style="display: none;"--}}>
                                     <label for="elenco" class="col-md-4 control-label">¿A cuál? </label>
                                     <div class="col-md-6">
                                         <select required name="elenco" id="elenco" class="form-control" value="{{ old('elenco') }}">
                                             <option value="">Elija una opción</option>
-                                            @foreach($elencos as $id => $name)
-                                                <option value="{{ $id }}">{{ $name }}</option>
-                                            @endforeach
+                                            <option value="0">No</option>
+                                                <optgroup label="Si. ¿Cuál?">
+                                                    @foreach($elencos as $id => $name)
+                                                        <option value="{{ $id }}">{{ $name }}</option>
+                                                    @endforeach
+                                                </optgroup>
                                         </select>
                                     </div>
                                 </div>
@@ -217,7 +220,7 @@
                         </div>
                     </div>
 
-                    
+
                 </div>
             </div>
         </div>
@@ -233,14 +236,14 @@
             } else {
                 $("#other_container").hide();
             }
-        })
+        });
 
-        $("#elenco_bool").change(function(){
+        /*$("#elenco_bool").change(function(){
             if ($(this).val() == 1) {
                 $("#elenco_container").show();
             } else {
                 $("#elenco_container").hide();
             }
-        })
+        })*/
     </script>
 @endsection
