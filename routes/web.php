@@ -95,7 +95,7 @@ Route::get('/results/{id}/report', function ($id) {
             'Provincia',
             'Elenco'
         ], ',', '"');
-
+dd($taller->users);
         foreach ($taller->users as $user) {
 
             $state = '';
