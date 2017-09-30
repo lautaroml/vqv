@@ -49,7 +49,7 @@ class HomeController extends Controller
 
         if ($taller->users->count() < $taller->cupo) {
             $user = auth()->user();
-            $taller->users()->sync([$user->id]);
+            $taller->users()->attach([$user->id]);
 
             Mail::send('inscription', [
                 'taller' => $taller->name,
