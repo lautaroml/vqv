@@ -65,3 +65,20 @@ Route::get('/results', function () {
     }
     return redirect()->route('home');
 });
+
+Route::get('/results/{id}/view', function ($id) {
+    if (auth()->user()->email == 'lautaroml@hotmail.com') {
+        $taller = \App\Taller::find($id);
+        $users = \App\User::all();
+        return view('results', compact('taller', 'users'));
+    }
+    return redirect()->route('home');
+});
+
+Route::get('/results', function () {
+    if (auth()->user()->email == 'lautaroml@hotmail.com') {
+        $talleres = \App\Taller::all();
+        return view('results', compact('talleres'));
+    }
+    return redirect()->route('home');
+});
