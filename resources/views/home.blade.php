@@ -79,7 +79,11 @@
                                         @if(auth()->user()->has($taller->id))
                                             <a class="btn btn-danger btn-xs" href="inscripcion/remove/{{ $taller->id }}">Eliminar inscripción</a>
                                         @else
-                                            <a class="btn btn-primary btn-xs" href="inscripcion/subscribe/{{  $taller->id }}">Inscribirme</a>
+                                            @if(! $taller->isFull())
+                                                <a class="btn btn-primary btn-xs" href="inscripcion/subscribe/{{  $taller->id }}">Inscribirme</a>
+                                            @else
+                                                <span class="badge badge-secondary">Taller sin cupo.</span>
+                                            @endif
                                         @endif
 
 
