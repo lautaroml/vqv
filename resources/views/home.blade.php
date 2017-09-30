@@ -78,9 +78,11 @@
                                         <button class="ladda-button" data-style="expand-right"><span class="ladda-label">Submit</span></button>
                                         <br>
                                         @if(auth()->user()->has($taller->id))
-                                            <a href="#">
-                                                <button class="btn btn-danger btn-xs ladda-button" data-style="expand-left"><span class="ladda-label">Eliminar inscripción</span></button>
-                                            </a>
+                                            <button class="btn btn-danger btn-xs ladda-button" data-style="expand-left"><span class="ladda-label">
+                                                    <a href="#">Eliminar inscripción</a>
+                                                </span>
+                                            </button>
+                                            <br>
                                             <a class="btn btn-danger btn-xs ladda-button" href="inscripcion/remove/{{ $taller->id }}">
                                                 <button class="btn btn-danger btn-xs ladda-button" data-style="expand-left"><span class="ladda-label">Eliminar inscripción</span></button>
                                             </a>
