@@ -26,13 +26,13 @@
                         </thead>
                         <tbody>
                             @foreach($taller->users as $user)
-                                <tr>{{ dd( $user->age) }}
+                                <tr>
                                     <td>{{$user->first_name}}</td>
                                     <td>{{$user->last_name}}</td>
                                     <td>{{$user->document}}</td>
                                     <td>{{$user->email}}</td>
-                                    <td>{{explode('-', (string) $user->age)[2]}} / {{explode('-',  (string) $user->age)[1]}} / {{explode('-',  (string) $user->age)[0]}}</td>
-                                    <td>{{$user->birthday}}</td>
+                                    <td>{{$user->age}}</td>
+                                    <td>{{explode('-', (string) $user->birthday)[2]}} / {{explode('-',  (string) $user->birthday)[1]}} / {{explode('-',  (string) $user->birthday)[0]}}</td>
                                     <td>{{$user->country_id}}</td>
                                     <td>{{$user->state_id}}</td>
                                     <td>{{$user->elenco}}</td>
