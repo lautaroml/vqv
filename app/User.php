@@ -24,6 +24,8 @@ class User extends Authenticatable
         'state_id',
         'email',
         'password',
+        'elenco',
+        'other_state'
     ];
 
     /**
