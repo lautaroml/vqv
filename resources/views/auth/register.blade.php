@@ -184,7 +184,7 @@
                                         <select required name="state" id="state" class="form-control">
                                             <option value="">Elija una opción</option>
                                             @foreach($states as $id => $name)
-                                                <option value="{{ $id }} {{ ( old('state')  == $name ? "selected":"") }}">{{ $name }}</option>
+                                                <option value="{{ $id }} {{ ( old('state')  == $id ? "selected":"") }}">{{ $name }}</option>
                                             @endforeach
                                             <option value="other">Otro</option>
                                         </select>
