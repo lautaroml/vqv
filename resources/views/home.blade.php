@@ -76,7 +76,7 @@
                                     </td>
                                     <td style="border-left: 1px solid">
                                         @if(auth()->user()->has($taller->id))
-
+                                            <button class="btn btn-danger btn-xs ladda-button" data-style="expand-left"><span class="ladda-label">Eliminar inscripción</span></button>
                                             <a class="btn btn-danger btn-xs ladda-button" href="inscripcion/remove/{{ $taller->id }}">
                                                 <button class="btn btn-danger btn-xs ladda-button" data-style="expand-left"><span class="ladda-label">Eliminar inscripción</span></button>
                                             </a>
