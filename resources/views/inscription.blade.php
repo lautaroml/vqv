@@ -17,7 +17,7 @@
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
-                height: 100vh;
+                height: 500px;
                 margin: 0;
             }
 
@@ -70,10 +70,9 @@
                 <div class="title m-b-md">
                     Vamos que venimos
                     <p>Hola {{ $user->first_name }} </p>
-                </div>
-
-                <div class="links">
-                    Quedaste inscripto al taller: {{ $taller }}
+                    <p>
+                        Quedaste inscripto/a en el taller: {{ $taller }}
+                    </p>
                 </div>
             </div>
         </div>
