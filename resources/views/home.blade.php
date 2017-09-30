@@ -75,10 +75,9 @@
                                         {{ implode(',', $taller->compatibilities->pluck('external_taller_id')->toArray()) }}
                                     </td>
                                     <td style="border-left: 1px solid">
-                                        
                                         @if(auth()->user()->has($taller->id))
                                             <button class="btn btn-danger btn-xs ladda-button" data-style="expand-left"><span class="ladda-label">
-                                                    <a href="#">Eliminar inscripción</a>
+                                                    <a href="inscripcion/remove/{{ $taller->id }}">Eliminar inscripción</a>
                                                 </span>
                                             </button>
                                             <br>
