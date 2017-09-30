@@ -227,11 +227,18 @@
 
 @section('javascript')
     <script>
+        if ($("#other_container").is(":visible") ) {
+            $("#other_container").attr('required', true);
+        } else {
+            $("#other_container").attr('required', false);
+        }
         $("#state").change(function(){
             if ($(this).val() == 'other') {
+                $("#other_container").attr('required', true);
                 $("#other_container").show();
             } else {
                 $("#other_container").hide();
+                $("#other_container").attr('required', false);
             }
         });
 
