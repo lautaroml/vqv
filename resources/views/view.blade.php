@@ -31,7 +31,7 @@
                                     <td>{{$user->last_name}}</td>
                                     <td>{{$user->document}}</td>
                                     <td>{{$user->email}}</td>
-                                    <td>{{ $user->age }}</td>
+                                    <td>{{explode('-', (string) $user->age)[2]}} / {{explode('-',  (string) $user->age)[1]}} / {{explode('-',  (string) $user->age)[0]}}</td>
                                     <td>{{$user->birthday}}</td>
                                     <td>{{$user->country_id}}</td>
                                     <td>{{$user->state_id}}</td>
