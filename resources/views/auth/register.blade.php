@@ -103,7 +103,7 @@
 
 
                                 <div id="elenco_container" class="form-group{{ $errors->has('elenco') ? ' has-error' : '' }}" {{--style="display: none;"--}}>
-                                    <label for="elenco" class="col-md-4 control-label">¿A cuál? </label>
+                                    <label for="elenco" class="col-md-4 control-label">¿Pertenece a un elenco que forma parte de este 9na Edición de VQV?</label>
                                     <div class="col-md-6">
                                         <select required name="elenco" id="elenco" class="form-control" value="{{ old('elenco') }}">
                                             <option value="">Elija una opción</option>
