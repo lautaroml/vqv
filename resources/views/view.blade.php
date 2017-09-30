@@ -41,7 +41,7 @@
                                             {{ $user->other_state }}
                                         @endif
                                     </td>
-                                    <td>{{$user->elenco}}</td>
+                                    <td>{{\App\Elenco::find($user->elenco)->name}}</td>
                                 </tr>
                             @endforeach
                         </tbody>
