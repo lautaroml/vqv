@@ -108,7 +108,7 @@
                                     <div class="col-md-6">
                                         <select required name="elenco" id="elenco" class="form-control" value="{{ old('elenco') }}">
                                             <option value="">Elija una opción</option>
-                                            <option value="0">No</option>
+                                            <option value="0" {{ ( old('elenco')  == 0 ? "selected":"") }}>No</option>
                                                 <optgroup label="Si. ¿Cuál?">
                                                     @foreach($elencos as $id => $name)
                                                         <option value="{{ $id }}" {{ ( old('elenco')  == $id ? "selected":"") }}>{{ $name }}</option>
@@ -239,6 +239,7 @@
             $("#other").prop('required', false);
         }
         $("#state").change(function(){
+            $("#other").val('');
             if ($(this).val() == '99') {
                 $("#other_container").show();
                 $("#other").prop('required', true);
