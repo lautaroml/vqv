@@ -182,7 +182,7 @@
 
                                     <div class="col-md-6">
                                         <select required name="state" id="state" class="form-control" value="{{ old('state') }}">
-                                            <option value="">Elija una opción</option>
+                                            <option value="">Elija una opción</option> {{ dd(old("state")) }}
                                             @foreach($states as $id => $name)
                                                 <option value="{{ $id }} {{ (old("state") == $name ? "selected":"") }}">{{ $name }}</option>
                                             @endforeach
