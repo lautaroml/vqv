@@ -13,8 +13,8 @@
                     <table class="table table-condensed table-hover">
                         <thead>
                             <tr>
-                                <th>Nombre</th>
                                 <th>Apellido</th>
+                                <th>Nombre</th>
                                 <th>Documento</th>
                                 <th>Email</th>
                                 <th>Edad</th>
@@ -25,10 +25,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($taller->users as $user)
+                            @foreach($taller->users->sortBy('last_name') as $user)
                                 <tr>
-                                    <td>{{$user->first_name}}</td>
                                     <td>{{$user->last_name}}</td>
+                                    <td>{{$user->first_name}}</td>
                                     <td>{{$user->document}}</td>
                                     <td>{{$user->email}}</td>
                                     <td>{{$user->age}}</td>

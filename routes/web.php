@@ -84,8 +84,8 @@ Route::get('/results/{id}/report', function ($id) {
         $handle = fopen('php://output', 'w');
 
         fputcsv($handle, [
-            'Nombre',
             'Apellido',
+            'Nombre',
             'Documento',
             'Email',
             'Edad',
@@ -111,8 +111,8 @@ Route::get('/results/{id}/report', function ($id) {
 
 
             $row = [
-                $user->first_name,
                 $user->last_name,
+                $user->first_name,
                 $user->document,
                 $user->email,
                 $user->age,
