@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Taller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -49,6 +50,17 @@ class HomeController extends Controller
         if ($taller->users->count() < $taller->cupo) {
             $user = auth()->user();
             $taller->users()->sync([$user->id]);
+
+            Mail::send('inscription', [
+                'taller' => $taller->name,
+                'user' => $user
+            ], function ($message)  use ($taller, $user) {
+                $message->subject('Comprobante de inscripción al taller [' . $taller->name . ']');
+                $message->from('vamosquevenimosfestival@gmail.com');
+                $message->to($user->email);
+            });
+
+
             return redirect()->back()->with([
                 'message_success' => 'Quedaste inscripto en el Taller: ' .$taller->name
             ]);
