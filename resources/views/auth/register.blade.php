@@ -178,16 +178,17 @@
 
 
 
-
-                        </div>
-
-                        <div class="form-group pull-right">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Confirmar
-                                </button>
+                            <div class="form-group pull-right">
+                                <div>
+                                    <button type="submit" class="btn btn-primary">
+                                        Confirmar
+                                    </button>
+                                </div>
                             </div>
+
+
                         </div>
+
                     </form>
                 </div>
             </div>
