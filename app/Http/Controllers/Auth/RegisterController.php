@@ -67,7 +67,7 @@ class RegisterController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
             'elenco' => 'required',
-            'other' => 'required_if:state,other',
+            'other' => 'required_if:state,99',
         ]);
     }
 
@@ -79,6 +79,9 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        /*if ( $data['state'] == 'other') {
+            $data['state'] = $data['other'];
+        }*/
         return User::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
@@ -90,6 +93,7 @@ class RegisterController extends Controller
             'elenco' => $data['elenco'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'other' => $data['other'],
         ]);
     }
 
