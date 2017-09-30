@@ -16,14 +16,14 @@
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 500px;
+                font-weight: 30;
+                /*height: 100vh;*/
                 margin: 0;
             }
 
-            .full-height {
+            /*.full-height {
                 height: 100vh;
-            }
+            }*/
 
             .flex-center {
                 align-items: center;
