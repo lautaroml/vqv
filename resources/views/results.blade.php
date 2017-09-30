@@ -37,7 +37,7 @@
                                             <a href="/results/{{ $taller->id }}/view">ver inscriptos</a>
                                         </span>
                                         <span class="btn btn-xs">
-                                            <a href="/results/{{ $taller->id }}/view">descargar csv</a>
+                                            <a href="/results/{{ $taller->id }}/report">descargar csv</a>
                                         </span>
                                     </td>
                                 </tr>
