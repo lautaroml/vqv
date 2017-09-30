@@ -75,15 +75,19 @@
                                         {{ implode(',', $taller->compatibilities->pluck('external_taller_id')->toArray()) }}
                                     </td>
                                     <td style="border-left: 1px solid">
-                                        @if(! $taller->isFull())
-                                            @if(auth()->user()->has($taller->id))
-                                                <a class="btn btn-danger btn-xs" href="inscripcion/remove/{{ $taller->id }}">Eliminar inscripción</a>
-                                            @else
-                                                <a class="btn btn-primary btn-xs" href="inscripcion/subscribe/{{  $taller->id }}">Inscribirme</a>
-                                            @endif
+
+                                        @if(auth()->user()->has($taller->id))
+                                            <a class="btn btn-danger btn-xs" href="inscripcion/remove/{{ $taller->id }}">Eliminar inscripción</a>
+                                        @else
+                                            <a class="btn btn-primary btn-xs" href="inscripcion/subscribe/{{  $taller->id }}">Inscribirme</a>
+                                        @endif
+
+
+                                        {{--@if(! $taller->isFull())
+
                                         @else
                                             <span class="badge badge-secondary">Taller sin cupo.</span>
-                                        @endif
+                                        @endif--}}
                                     </td>
                                 </tr>
                             @endforeach
