@@ -78,7 +78,7 @@ Route::get('/results/{id}/report', function ($id) {
 
     if (auth()->user()->email == 'lautaroml@hotmail.com') {
         $taller = \App\Taller::find($id);
-
+        dd($taller->users);
 
     $response = new \Symfony\Component\HttpFoundation\StreamedResponse(function() use($taller){
 
@@ -95,7 +95,7 @@ Route::get('/results/{id}/report', function ($id) {
             'Provincia',
             'Elenco'
         ], ',', '"');
-dd($taller->users);
+
         foreach ($taller->users as $user) {
 
             $state = '';
