@@ -86,6 +86,19 @@
                             </div>
 
 
+                            <div class="form-group{{ $errors->has('elenco') ? ' has-error' : '' }}">
+                                <label for="elenco" class="col-md-4 control-label">Provincia </label>
+                                <div class="col-md-6">
+                                    <select required name="elenco" id="elenco" class="form-control" value="{{ old('elenco') }}">
+                                        <option value="">Elija una opción</option>
+                                        @foreach($elencos as $id => $name)
+                                            <option value="{{ $id }}">{{ $name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+
+
                         </div>
 
 
