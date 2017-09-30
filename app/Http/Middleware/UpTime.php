@@ -19,6 +19,7 @@ class UpTime
         if ($hoy['mon'] == 9 && $hoy['mday'] == 30 && $hoy['hours'] >= 19) {
             return $next($request);
         }
-        return redirect('welcome');
+        dd(1);
+        return view('welcome');
     }
 }

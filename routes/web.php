@@ -36,15 +36,14 @@ Route::get('/', function () {
 
 
 Route::get('/prueba_mid', function () {
-    //TODO:remove next line.
-    return view('welcome');
-
-    if ( auth()->guest() ) {
-        return view('auth.login');
-    } else {
-        $talleres = \App\Taller::all();
-
-        return view('home', compact('talleres'));
+    $hoy = getdate();
+    if ($hoy['mon'] == 9 && $hoy['mday'] == 30 && $hoy['hours'] >= 19) {
+        if ( auth()->guest() ) {
+            return view('auth.login');
+        } else {
+            $talleres = \App\Taller::all();
+            return view('home', compact('talleres'));
+        }
     }
-
+    return view('welcome');
 })->middleware('up_date');
