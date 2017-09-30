@@ -76,10 +76,66 @@ Route::get('/results/{id}/view', function ($id) {
 
 Route::get('/results/{id}/report', function ($id) {
 
-    dd($id);
     if (auth()->user()->email == 'lautaroml@hotmail.com') {
-        $talleres = \App\Taller::all();
-        return view('results', compact('talleres'));
+        $taller = \App\Taller::find($id);
+
+
+    $response = new \Symfony\Component\HttpFoundation\StreamedResponse(function() use($taller){
+
+        $handle = fopen('php://output', 'w');
+
+        fputcsv($handle, [
+            'Nombre',
+            'Apellido',
+            'Documento',
+            'Email',
+            'Edad',
+            'Nacimiento',
+            'País',
+            'Provincia',
+            'Elenco'
+        ], ',', '"');
+
+        foreach ($taller->users as $user) {
+
+            $state = '';
+            if($user->state_id != 99) {
+                $state = \App\State::find($user->state_id)->name;
+            } else {
+                $state = $user->other_state;
+            }
+
+            $elenco = '';
+            if ($user->elenco) {
+                $elenco = \App\Elenco::find($user->elenco)->name;
+            }
+
+
+            $row = [
+                $user->first_name,
+                $user->last_name,
+                $user->document,
+                $user->email,
+                $user->age,
+                explode('-', (string) $user->birthday)[2] . '/' .  explode('-', (string) $user->birthday)[1] . '/' . explode('-', (string) $user->birthday)[0],
+                \App\Country::find($user->country_id)->name,
+                $state,
+                $elenco
+            ];
+        }
+            fputcsv($handle, $row, ',', '"');
+
+        fclose($handle);
+    }, 200, [
+        'Content-Type' => 'text/csv',
+        'Content-Disposition' => 'attachment; filename="Envíos_'. time() .'.csv"',
+    ]);
+    return $response;
+
+
     }
     return redirect()->route('home');
+
+
+
 });
