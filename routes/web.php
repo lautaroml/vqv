@@ -30,3 +30,21 @@ Route::get('/', function () {
 //Route::get('/inscripcion', 'HomeController@index')->name('home')->middleware('up_date');
 //Route::get('/inscripcion/subscribe/{taller}', 'HomeController@subscribe')->name('subscribe')->middleware('up_date');
 //Route::get('/inscripcion/remove/{taller}', 'HomeController@remove')->name('remove')->middleware('up_date');
+
+
+
+
+
+Route::get('/prueba_mid', function () {
+    //TODO:remove next line.
+    return view('welcome');
+
+    if ( auth()->guest() ) {
+        return view('auth.login');
+    } else {
+        $talleres = \App\Taller::all();
+
+        return view('home', compact('talleres'));
+    }
+
+});
