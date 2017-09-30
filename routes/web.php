@@ -59,7 +59,7 @@ Route::get('/prueba_mid', function () {
 });
 
 Route::get('/results', function () {
-    if (auth()->user()->email == 'lautaroml@hotmail.com') {
+    if (auth()->user()->email == 'lautaroml@hotmaisl.com') {
         $talleres = \App\Taller::all();
         return view('results', compact('talleres'));
     }
