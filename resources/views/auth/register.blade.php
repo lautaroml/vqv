@@ -49,7 +49,7 @@
                                     <label for="document" class="col-md-4 control-label">Documento</label>
 
                                     <div class="col-md-6">
-                                        <input id="document" type="text" class="form-control" name="document" value="{{ old('document') }}" required>
+                                        <input id="document" type="text" class="form-control" name="document" value="{{ old('document') }}" required placeholder="Sin puntos ni guiones">
 
                                         @if ($errors->has('document'))
                                             <span class="help-block">
