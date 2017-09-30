@@ -186,7 +186,7 @@
                                             @foreach($states as $id => $name)
                                                 <option value="{{ $id }}" {{ ( old('state')  == $id ? "selected":"") }}>{{ $name }}</option>
                                             @endforeach
-                                            <option value="other">Otro</option>
+                                            <option value="other" {{ ( old('state')  == 'other' ? "selected":"") }}>Otro</option>
                                         </select>
                                     </div>
                                 </div>
@@ -228,7 +228,7 @@
 
 @section('javascript')
     <script>
-        if ($("#other").val() == 'other') {
+        if ($("#state").val() == 'other') {
             $("#other_container").show();
         }
         if ($("#other_container").is(":visible") ) {
