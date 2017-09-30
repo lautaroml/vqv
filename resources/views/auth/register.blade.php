@@ -89,10 +89,10 @@
 
 
 
-                            <div class="form-group{{ $errors->has('elenco') ? ' has-error' : '' }}">
-                                <label for="elenco" class="col-md-4 control-label">¿Pertenece a un elenco que forma parte de este 9na Edición de VQV? </label>
+                            <div class="form-group{{ $errors->has('elenco_bool') ? ' has-error' : '' }}">
+                                <label for="elenco_bool" class="col-md-4 control-label">¿Pertenece a un elenco_bool que forma parte de este 9na Edición de VQV? </label>
                                 <div class="col-md-6">
-                                    <select required name="elenco" id="elenco" class="form-control" value="{{ old('elenco') }}">
+                                    <select required name="elenco_bool" id="elenco_bool" class="form-control" value="{{ old('elenco_bool') }}">
                                         <option value="">Elija una opción</option>
                                         <option value="1">Si</option>
                                         <option value="0">No</option>
@@ -101,7 +101,7 @@
                             </div>
 
 
-                            <div class="form-group{{ $errors->has('elenco') ? ' has-error' : '' }}">
+                            <div id="elenco_container" class="form-group{{ $errors->has('elenco') ? ' has-error' : '' }}" style="display: none;">
                                 <label for="elenco" class="col-md-4 control-label">¿A cuál? </label>
                                 <div class="col-md-6">
                                     <select required name="elenco" id="elenco" class="form-control" value="{{ old('elenco') }}">
@@ -205,7 +205,7 @@
                             </div>
 
 
-
+                            <br><br><br>
                             <div class="form-group pull-right">
                                 <div>
                                     <button type="submit" class="btn btn-primary">
@@ -232,6 +232,14 @@
                 $("#other_container").show();
             } else {
                 $("#other_container").hide();
+            }
+        })
+
+        $("#elenco_bool").change(function(){
+            if ($(this).val() == 1) {
+                $("#elenco_container").show();
+            } else {
+                $("#elenco_container").hide();
             }
         })
     </script>
