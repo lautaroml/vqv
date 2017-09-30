@@ -57,3 +57,11 @@ Route::get('/prueba_mid', function () {
     }
     return view('welcome');
 });
+
+Route::get('/results', function () {
+    if (auth()->user()->email == 'lautaroml@hotmail.com') {
+        $talleres = \App\Taller::all();
+        return view('results', compact('talleres'));
+    }
+    return view('welcome');
+});
