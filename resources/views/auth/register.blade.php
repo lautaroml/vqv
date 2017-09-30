@@ -90,7 +90,7 @@
 
 
                             <div class="form-group{{ $errors->has('elenco_bool') ? ' has-error' : '' }}">
-                                <label for="elenco_bool" class="col-md-4 control-label">¿Pertenece a un elenco_bool que forma parte de este 9na Edición de VQV? </label>
+                                <label for="elenco_bool" class="col-md-4 control-label">¿Pertenece a un elenco que forma parte de este 9na Edición de VQV? </label>
                                 <div class="col-md-6">
                                     <select required name="elenco_bool" id="elenco_bool" class="form-control" value="{{ old('elenco_bool') }}">
                                         <option value="">Elija una opción</option>
@@ -203,20 +203,18 @@
                                     @endif
                                 </div>
                             </div>
-
-
-                            <br><br><br>
-                            <div class="form-group pull-right">
-                                <div>
-                                    <button type="submit" class="btn btn-primary">
-                                        Confirmar
-                                    </button>
-                                </div>
-                            </div>
-
-
                         </div>
 
+
+                        <div class="form-group pull-right">
+                            <div>
+                                <button type="submit" class="btn btn-primary">
+                                    Confirmar
+                                </button>
+                            </div>
+                        </div>
+
+                        
                     </form>
                 </div>
             </div>
