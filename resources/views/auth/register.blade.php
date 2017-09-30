@@ -193,7 +193,7 @@
 
 
                                 <div id="other_container" class="form-group{{ $errors->has('other') ? ' has-error' : '' }}" style="display: none">
-                                    <label for="other" class="col-md-4 control-label">Provincia</label>
+                                    <label for="other" class="col-md-4 control-label">Escriba cual</label>
 
                                     <div class="col-md-6">
                                         <input id="other" value="{{ old('other') }}" type="text" class="form-control" name="other" value="{{ old('other') }}" >
