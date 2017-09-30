@@ -26,4 +26,14 @@ class Taller extends Model
          $comp = $this->compatibilities->pluck('external_taller_id');
     }
 
+    public function isFull()
+    {
+        $inscriptos = count($this->users());
+
+        if ($inscriptos < $this->cupo) {
+            return false;
+        }
+        return true;
+    }
+
 }
