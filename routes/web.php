@@ -95,7 +95,7 @@ Route::get('/results/{id}/report', function ($id) {
             'Elenco'
         ], ',', '"');
 
-        foreach ($taller->users->orderBy('last_name') as $user) {
+        foreach ($taller->users->sortBy('last_name') as $user) {
 
             $state = '';
             if($user->state_id != 99) {
