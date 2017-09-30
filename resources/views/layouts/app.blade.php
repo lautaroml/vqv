@@ -12,6 +12,12 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="dist/ladda-themeless.min.css">
+    <script src="dist/spin.min.js"></script>
+    <script src="dist/ladda.min.js"></script>
+
+
     @yield('styles')
 </head>
 <body>
