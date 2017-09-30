@@ -162,7 +162,7 @@
 
 
 
-                            <div class="form-group{{ $errors->has('other') ? ' has-error' : '' }}" style="display: none">
+                            <div id="other_container" class="form-group{{ $errors->has('other') ? ' has-error' : '' }}" style="display: none">
                                 <label for="other" class="col-md-4 control-label">Provincia</label>
 
                                 <div class="col-md-6">
@@ -194,4 +194,16 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('javascript')
+    <script>
+        $("#state").change(function(){
+            if ($(this).val() == 'other') {
+                $("#other_container").show();
+            } else {
+                $("#other_container").hide();
+            }
+        })
+    </script>
 @endsection
