@@ -111,7 +111,7 @@
                                             <option value="0">No</option>
                                                 <optgroup label="Si. ¿Cuál?">
                                                     @foreach($elencos as $id => $name)
-                                                        <option value="{{ $id }}">{{ $name }}</option>
+                                                        <option value="{{ $id }}" {{ ( old('elenco')  == $id ? "selected":"") }}>{{ $name }}</option>
                                                     @endforeach
                                                 </optgroup>
                                         </select>
@@ -171,7 +171,7 @@
                                         <select required name="country" id="country" class="form-control">
                                             <option value="">Elija una opción</option>
                                             @foreach($countries as $id => $name)
-                                                <option value="{{ $id }}">{{ $name }}</option>
+                                                <option value="{{ $id }}" {{ ( old('country')  == $id ? "selected":"") }}>{{ $name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -228,6 +228,9 @@
 
 @section('javascript')
     <script>
+        if ($("#other").val() == 'other') {
+            $("#other_container").show();
+        }
         if ($("#other_container").is(":visible") ) {
             $("#other").prop('required', true);
         } else {
