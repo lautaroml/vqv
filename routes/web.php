@@ -26,10 +26,10 @@ Route::get('/', function () {
 });
 
 // TODO: Uncomment this.
-//Auth::routes()->middleware('up_date');
-//Route::get('/inscripcion', 'HomeController@index')->name('home')->middleware('up_date');
-//Route::get('/inscripcion/subscribe/{taller}', 'HomeController@subscribe')->name('subscribe')->middleware('up_date');
-//Route::get('/inscripcion/remove/{taller}', 'HomeController@remove')->name('remove')->middleware('up_date');
+Auth::routes()->middleware('up_date');
+Route::get('/inscripcion', 'HomeController@index')->name('home')->middleware('up_date');
+Route::get('/inscripcion/subscribe/{taller}', 'HomeController@subscribe')->name('subscribe')->middleware('up_date');
+Route::get('/inscripcion/remove/{taller}', 'HomeController@remove')->name('remove')->middleware('up_date');
 
 
 
