@@ -8,8 +8,9 @@
                 <div class="panel-heading">Registro de usuario</div>
 
                 <div class="panel-body">
+                    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                     <div class="row">
-                        <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+
                             {{ csrf_field() }}
 
                             <div class="col-md-6">
@@ -206,7 +207,7 @@
                                 </div>
                             </div>
 
-                        </form>
+
                     </div>
 
                     <div class="form-group pull-right">
@@ -217,7 +218,7 @@
                         </div>
                     </div>
 
-
+                    </form>
                 </div>
             </div>
         </div>
