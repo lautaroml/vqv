@@ -46,10 +46,10 @@
                                 </div>
 
                                 <div class="form-group{{ $errors->has('document') ? ' has-error' : '' }}">
-                                    <label for="document" class="col-md-4 control-label">Documento</label>
+                                    <label for="document" class="col-md-4 control-label">Documento (Sin puntos ni guiones)</label>
 
                                     <div class="col-md-6">
-                                        <input id="document" type="text" class="form-control" name="document" value="{{ old('document') }}" required placeholder="Sin puntos ni guiones">
+                                        <input id="document" type="text" class="form-control" name="document" value="{{ old('document') }}" required>
 
                                         @if ($errors->has('document'))
                                             <span class="help-block">
