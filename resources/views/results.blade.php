@@ -33,8 +33,12 @@
                                         {{ count($taller->users) }} / {{ $taller->cupo }}
                                     </td>
                                     <td>
-                                        <a href="">ver inscriptos</a>
-                                        <a href="">descargar csv</a>
+                                        <span class="btn btn-info btn-xs">
+                                            <a href="/results/{{ $taller->id }}/view">ver inscriptos</a>
+                                        </span>
+                                        <span class="btn btn-info btn-xs">
+                                            <a href="/results/{{ $taller->id }}/view">descargar csv</a>
+                                        </span>
                                     </td>
                                 </tr>
                             @endforeach

@@ -75,7 +75,9 @@ Route::get('/results/{id}/view', function ($id) {
     return redirect()->route('home');
 });
 
-Route::get('/results', function () {
+Route::get('/results/{id}/report', function ($id) {
+
+    dd($id);
     if (auth()->user()->email == 'lautaroml@hotmail.com') {
         $talleres = \App\Taller::all();
         return view('results', compact('talleres'));
