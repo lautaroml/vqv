@@ -86,8 +86,23 @@
                             </div>
 
 
+
+
+
                             <div class="form-group{{ $errors->has('elenco') ? ' has-error' : '' }}">
-                                <label for="elenco" class="col-md-4 control-label">Provincia </label>
+                                <label for="elenco" class="col-md-4 control-label">¿Pertenece a un elenco que forma parte de este 9na Edición de VQV? </label>
+                                <div class="col-md-6">
+                                    <select required name="elenco" id="elenco" class="form-control" value="{{ old('elenco') }}">
+                                        <option value="">Elija una opción</option>
+                                        <option value="1">Si</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group{{ $errors->has('elenco') ? ' has-error' : '' }}">
+                                <label for="elenco" class="col-md-4 control-label">¿A cuál? </label>
                                 <div class="col-md-6">
                                     <select required name="elenco" id="elenco" class="form-control" value="{{ old('elenco') }}">
                                         <option value="">Elija una opción</option>
