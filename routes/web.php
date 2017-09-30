@@ -23,7 +23,7 @@ Route::get('/', function () {
         return view('home', compact('talleres'));
     }
 
-})->middleware('up_date');
+});
 
 // TODO: Uncomment this.
 //Auth::routes()->middleware('up_date');
