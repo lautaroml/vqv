@@ -26,7 +26,7 @@
                         </thead>
                         <tbody>
                             @foreach($taller->users as $user)
-                                <tr>
+                                <tr>{{ dd( $user->age) }}
                                     <td>{{$user->first_name}}</td>
                                     <td>{{$user->last_name}}</td>
                                     <td>{{$user->document}}</td>
