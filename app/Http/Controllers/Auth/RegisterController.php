@@ -49,7 +49,7 @@ class RegisterController extends Controller
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
-    {
+    {dd($data['elenco']);
         $age = 19;
         if (isset($data['elenco'])) {
             if (strlen($data['elenco']) > 0) {
