@@ -28,7 +28,7 @@ class Taller extends Model
 
     public function isFull()
     {
-        $inscriptos = count($this->users());
+        $inscriptos = count($this->users);
 
         if ($inscriptos == $this->cupo) {
             return true;
