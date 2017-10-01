@@ -30,10 +30,10 @@ class Taller extends Model
     {
         $inscriptos = count($this->users());
 
-        if ($inscriptos < $this->cupo) {
-            return false;
+        if ($inscriptos == $this->cupo) {
+            return true;
         }
-        return true;
+        return false;
     }
 
 }
