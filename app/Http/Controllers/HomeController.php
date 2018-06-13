@@ -51,14 +51,14 @@ class HomeController extends Controller
             $user = auth()->user();
             $taller->users()->attach([$user->id]);
 
-            /*Mail::send('inscription', [
+            Mail::send('inscription', [
                 'taller' => $taller->name,
                 'user' => $user
             ], function ($message)  use ($taller, $user) {
                 $message->subject('Comprobante de inscripción al taller [' . $taller->name . ']');
                 $message->from('vamosquevenimosfestival@gmail.com', 'Vamos que venimos');
                 $message->to($user->email);
-            });*/
+            });
 
 
             return redirect()->back()->with([
