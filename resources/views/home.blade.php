@@ -37,9 +37,9 @@
                                 <th></th>
                                 <th>Nombre</th>
                                 <th>Profesor</th>
-                                <th>Sabado</th>
-                                <th>Domingo</th>
-                                <th>Lunes</th>
+                                <th>Sáb 9 a 14</th>
+                                <th>Sáb 14 a 16</th>
+                                <th>Dom 9 a 14</th>
                                 <th>Compatible con:</th>
                                 <th>Acciones</th>
                             </tr>
