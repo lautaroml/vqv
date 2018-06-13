@@ -56,7 +56,7 @@ class HomeController extends Controller
                 'user' => $user
             ], function ($message)  use ($taller, $user) {
                 $message->subject('Comprobante de inscripción al taller [' . $taller->name . ']');
-                $message->from('inscripciones.vqv.cba@gmail.com', 'Vamos que venimos');
+                $message->from('vamosquevenimosfestival2018@gmail.com', 'Vamos que venimos');
                 $message->to($user->email);
             });
 

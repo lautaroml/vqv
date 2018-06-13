@@ -56,7 +56,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'inscripciones.vqv.cba@gmail.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'vamosquevenimosfestival2018@gmail.com'),
         'name' => env('MAIL_FROM_NAME', 'Vamos que venimos'),
     ],
 
