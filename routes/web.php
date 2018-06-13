@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     $hoy = getdate();
-    if (null) {
+    if (1) {
         if ( auth()->guest() ) {
             return view('auth.login');
         } else {
