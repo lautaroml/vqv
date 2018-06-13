@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->unsignedInteger('state_id');
             $table->unsignedInteger('city_id');
             $table->string('elenco');
+            $table->string('other_state');
 
             $table->rememberToken();
             $table->timestamps();

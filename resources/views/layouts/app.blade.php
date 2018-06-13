@@ -53,7 +53,7 @@
                         @else
                            @if((in_array(Auth::user()->email, $emails)))
                                 <li>
-                                    <a href="http://184.75.254.174/results">
+                                    <a href="/results">
                                         <b>Resultados</b>
                                     </a>
                                 </li>

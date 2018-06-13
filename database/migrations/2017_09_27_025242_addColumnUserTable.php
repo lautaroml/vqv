@@ -15,13 +15,13 @@ class AddColumnUserTable extends Migration
     {
         Schema::table('users', function($table)
         {
-            $table->string('last_name');
+            /*$table->string('last_name');
             $table->string('document');
             $table->integer('age');
             $table->date('birthday');
             $table->unsignedInteger('country_id');
             $table->unsignedInteger('state_id');
-            $table->string('elenco');
+            $table->string('elenco');*/
         });
     }
 
