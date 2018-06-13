@@ -62,7 +62,7 @@ class HomeController extends Controller
 
 
             return redirect()->back()->with([
-                'message_success' => 'Quedaste inscripto en el Taller: ' .$taller->name . '<br>  Te llegará un e-mail con la confirmación de la inscripción.'
+                'message_success' => 'Quedaste inscripto en el Taller: ' .$taller->name . '<br>  Te llegará un e-mail con la confirmación de la inscripción. (Si no lo ves en unos minutos, fijate que no este como SPAM)'
             ]);
         }
 
